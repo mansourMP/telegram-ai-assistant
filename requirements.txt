@@ -1,0 +1,6 @@
+fpdf2
+openai
+Pillow
+pyTelegramBotAPI
+python-dotenv
+requests

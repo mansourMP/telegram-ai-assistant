@@ -1,0 +1,5 @@
+venv/
+.git/
+University/Economics/*.PNG
+University/Economics/*.png
+**/.DS_Store

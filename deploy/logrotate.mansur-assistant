@@ -1,0 +1,8 @@
+/opt/mansur-assistant/data/assistant.log {
+    daily
+    rotate 7
+    compress
+    missingok
+    notifempty
+    create 0640 mansurbot mansurbot
+}

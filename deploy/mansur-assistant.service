@@ -1,0 +1,24 @@
+[Unit]
+Description=Mansur Assistant Telegram Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=mansurbot
+Group=mansurbot
+WorkingDirectory=/opt/mansur-assistant
+ExecStart=/opt/mansur-assistant/venv/bin/mansur-bot
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+# Allow read-only access to necessary paths, data/ must be writable
+ReadWritePaths=/opt/mansur-assistant/data
+
+[Install]
+WantedBy=multi-user.target

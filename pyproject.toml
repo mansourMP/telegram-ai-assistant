@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mansur-bot"
+version = "0.1.0"
+description = "Telegram-based study bot for quiz delivery and explanations."
+authors = [{name = "Mansur", email = "mansur@example.com"}]
+dependencies = [
+    "fpdf2",
+    "openai",
+    "Pillow",
+    "pyTelegramBotAPI",
+    "python-dotenv",
+    "requests"
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+mansur-bot = "mansur_bot.bot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
