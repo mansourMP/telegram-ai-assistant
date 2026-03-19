@@ -4,6 +4,9 @@ import time
 import pytest
 from unittest.mock import MagicMock, patch
 
+# Ensure env vars are set before importing bot
+os.environ["TELEGRAM_BOT_TOKEN"] = "test_token"
+
 # Ensure src is in the import path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 from mansur_bot import bot
